@@ -1,7 +1,7 @@
 public class Review
 {
     //Atributos del review
-    int calificacion = new Int();
-    string comentario = new String();
+    public int calificacion {get; set;}
+    public string comentario{get; set;}
 
 }

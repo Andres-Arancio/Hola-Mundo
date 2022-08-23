@@ -1,17 +1,17 @@
 public class Product
 {
     //Atributos del producto
-    string nombre = new String();
-    int precio = new Int();
+    public string nombre{get; set;}
+    public int precio{get; set;}
     List<Review> prodreview = new List<Review>();
     
     //Metodo que muestra cada review de un dado producto
     public void showreviews()
     {
-            foreach(List<Review> r in this.prodreview)
+            foreach(Review r in this.prodreview)
             {
-                Console.WriteLine($"Puntuacion: {this.prodreview.calificacion}");
-                Console.WriteLine($"Comentario: {this.prodreview.comentario}");
+                Console.WriteLine($"Puntuacion: {r.calificacion}");
+                Console.WriteLine($"Comentario: {r.comentario}");
             }
     }
 
@@ -19,8 +19,8 @@ public class Product
     public void addreview(int addcalificacion, string addcomentario)
     {
         Review newReview = new Review();
-        Review.calificacion = addcalificacion;
-        Review.comentario = addcomentario;
-        List<Review>.add(newReview);
+        newReview.calificacion = addcalificacion;
+        newReview.comentario = addcomentario;
+        this.prodreview.Add(newReview);
     }
 }

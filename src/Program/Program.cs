@@ -11,14 +11,12 @@ public class Program
         
         //Declaracion de los componentes de la review
         string reviewcomment = "A very fine Test comment";
-        string reviewscore = 5;
+        int reviewscore = 5;
         
         //Llamado al metodo de agregar la review
-        Product.addreview(NewProduct, reviewscore, reviewcomment);
+        NewProduct.addreview(reviewscore, reviewcomment);
 
         //Confirmacion llamando al metodo de mostrar reviews
-        Product.showreviews(NewProduct);
-
-        return 0;
+        NewProduct.showreviews();
     }
 }
